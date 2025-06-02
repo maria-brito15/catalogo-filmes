@@ -1,0 +1,127 @@
+{
+  "usuarios": [
+    {
+      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Admin",
+      "desc": "Perfil do Administrador",
+      "email": "admin@abc.com",
+      "favoritos": [
+        1241436,
+        680,
+        1153714,
+        822119,
+        389,
+        1233413,
+        129
+      ],
+      "avatar": "assets/images/defaultPFP.jpg"
+    },
+    {
+      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "desc": "",
+      "email": "user@abc.com",
+      "favoritos": [
+        278
+      ],
+      "avatar": "assets/images/defaultPFP.jpg"
+    }
+  ],
+  "filmes": [
+    {
+      "id": "2",
+      "titulo": "Oppenheimer",
+      "genero": "Drama",
+      "ano": 2023,
+      "diretor": "Christopher Nolan",
+      "avaliacao": 8.6
+    },
+    {
+      "id": "3",
+      "titulo": "Homem-Aranha: Através do Aranhaverso",
+      "genero": "Animação",
+      "ano": 2023,
+      "diretor": "Joaquim Dos Santos",
+      "avaliacao": 8.8
+    },
+    {
+      "id": "4",
+      "titulo": "Barbie",
+      "genero": "Comédia",
+      "ano": 2023,
+      "diretor": "Greta Gerwig",
+      "avaliacao": 7.4
+    },
+    {
+      "id": "5",
+      "titulo": "John Wick 4: Baba Yaga",
+      "genero": "Ação",
+      "ano": 2023,
+      "diretor": "Chad Stahelski",
+      "avaliacao": 8.2
+    },
+    {
+      "id": "6",
+      "titulo": "Wonka",
+      "genero": "Fantasia",
+      "ano": 2023,
+      "diretor": "Paul King",
+      "avaliacao": 7.3
+    },
+    {
+      "id": "7",
+      "titulo": "The Batman",
+      "genero": "Ação",
+      "ano": 2022,
+      "diretor": "Matt Reeves",
+      "avaliacao": 8.1
+    },
+    {
+      "id": "8",
+      "titulo": "Pantera Negra: Wakanda Para Sempre",
+      "genero": "Ação",
+      "ano": 2022,
+      "diretor": "Ryan Coogler",
+      "avaliacao": 6.7
+    },
+    {
+      "id": "9",
+      "titulo": "Tudo em Todo Lugar ao Mesmo Tempo",
+      "genero": "Ficção Científica",
+      "ano": 2022,
+      "diretor": "Daniel Scheinert, Daniel Kwan",
+      "avaliacao": 8
+    },
+    {
+      "id": "10",
+      "titulo": "O Menu",
+      "genero": "Suspense",
+      "ano": 2022,
+      "diretor": "Mark Mylod",
+      "avaliacao": 7.3
+    },
+    {
+      "id": "6a4e"
+    },
+    {
+      "id": "daa9",
+      "titulo": "Godzilla x Kong: O Novo Império",
+      "genero": "Ação",
+      "ano": 2024,
+      "diretor": "Adam Wingard",
+      "avaliacao": 7.2
+    },
+    {
+      "id": "4fe6d919-9e1a-4b26-b05e-e9fd3925bf62",
+      "titulo": "Avatar",
+      "ano": 2008,
+      "genero": "Aventura",
+      "diretor": "James Cameron",
+      "avaliacao": 8
+    }
+  ]
+}

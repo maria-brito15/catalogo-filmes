@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <title>Login</title>
+</head>
+
+<style>
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  input {
+    padding-left: 0.8rem;
+    padding-right: 4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  main {
+    width: 50%;
+  }
+
+  footer {
+    position: fixed;
+}
+
+</style>
+
+<body>
+
+  <header class="d-flex justify-content-center gap-4 align-items-center ">
+    <span class="material-symbols-outlined">movie</span>
+    <p class="mt-3">Catálogo de Filmes</p>
+  </header>
+  
+  <main>
+
+    <div id="pop-up" class="register-popup d-none">
+      <div class="register-container border p-5 rounded-5 bg-dark">
+        <h2 class="text-center mb-4 text-white">Registro</h2>
+        <form id="registerForm" class="d-flex flex-column gap-4">
+          <input type="text" id="username" placeholder="Nome de Usuário" required>
+          <input type="email" id="registerEmail" placeholder="Email" required>
+          <input type="password" id="registerPassword" placeholder="Senha" required>
+          <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+
+          <button type="submit" class="py-2 rounded-4 bg-danger">Registrar</button>
+        </form>
+        <p id="msgErro" class="error-msg"></p>
+      </div>
+    </div>
+
+    <div class="login-container">
+      <h2 class="text-center mb-4 text-white">Login</h2>
+      <form id="loginForm" class="d-flex flex-column gap-4">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Senha" required>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <p>Não Tem Conta?</p>
+          <button type="button" id="btnMostrarRegistro" class="py-2 px-3 rounded-4 bg-warning mb-3">Registrar</button>
+        </div>
+
+        <button type="submit" class="py-2 rounded-4 bg-danger ">Entrar</button>
+      </form>
+      <p id="msgErro" class="error-msg"></p>
+    </div>
+  </main>
+  
+  <script src="assets/scripts/login.js"></script>
+</body>
+</html>
