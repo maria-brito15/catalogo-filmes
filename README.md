@@ -17,8 +17,9 @@ Este projeto é um **catálogo de filmes interativo** desenvolvido com **HTML, C
 - Gráfico de Gêneros com dados visuais sobre a distribuição dos filmes.
 - Perfil do Usuário com imagem e dados editáveis  
 
-## ✅ Estrutura de Pastas
+## 📁 Estrutura de Pastas
 
+```
 catalogo_de_filmes/
 │
 ├── .git/
@@ -52,7 +53,8 @@ catalogo_de_filmes/
 │
 ├── .gitignore
 ├── package.json
-└── README.md 
+└── README.md
+```
 
 ## 🔑 Acesso ao Site
 
