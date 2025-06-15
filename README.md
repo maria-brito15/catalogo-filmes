@@ -16,8 +16,43 @@ Este projeto é um **catálogo de filmes interativo** desenvolvido com **HTML, C
 - Visualização por **Gêneros e Categorias**, com páginas específicas  .
 - Gráfico de Gêneros com dados visuais sobre a distribuição dos filmes.
 - Perfil do Usuário com imagem e dados editáveis  
-- Estrutura organizada com pastas separadas para **scripts**, **imagens** e **estilos**.
 
+## ✅ Estrutura de Pastas
+
+catalogo_de_filmes/
+│
+├── .git/
+├── db/
+│   └── db.json
+│
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── scripts/
+│   │       ├── app.js
+│   │       ├── auth.js
+│   │       ├── dashboard.js
+│   │       ├── favoritos.js
+│   │       ├── generos.js
+│   │       ├── graf.js
+│   │       ├── login.js
+│   │       ├── perfil.js
+│   │       └── resultados.js
+│   │
+│   ├── categoria.html
+│   ├── dashboard.html
+│   ├── detalhes.html
+│   ├── favoritos.html
+│   ├── generos.html
+│   ├── index.html
+│   ├── login.html
+│   ├── perfil.html
+│   └── resultados.html
+│
+├── .gitignore
+├── package.json
+└── README.md 
 
 ## 🔑 Acesso ao Site
 
