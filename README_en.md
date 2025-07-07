@@ -1,186 +1,169 @@
-# 📚 People Management System
+# 🎬 Movie Catalog - Practical Assignment
 
-A complete system developed in C++ to manage student and teacher information with command-line interface, advanced search functionalities, and data persistence.
+- **Author:** Maria Eduarda de P. Brito  
 
-## ✨ Features
+## 📄 Project Description
 
-### 🎯 Main Features
-- **People Registration**: Complete registration of students and teachers
-- **Intelligent Search**: Search by name (partial) or CPF
-- **Organized Listings**: View by category or general
-- **Birthday Tracking**: Query birthday people by specific month
-- **Automatic Persistence**: Saving to text files
-- **Data Validation**: CPF, date, and data entry verification
-- **Memory Management**: Dynamic control with leak prevention
+This project is an **interactive movie catalog** developed with **HTML, CSS and JavaScript**, using **JSON Server** as a simulated backend through the `db.json` file. The application allows users to browse, search and favorite movies, as well as interact with various modern features of a digital catalog system.
 
-### 👨‍🎓 Student Data
-- Full name
-- CPF (automatically formatted)
-- Date of birth
-- Registration number
+## ✅ Features
 
-### 👨‍🏫 Teacher Data
-- Full name
-- CPF (automatically formatted)
-- Date of birth
-- Academic degree (Especialista, Mestre, Doutor)
+- Home Page with movie highlights and intuitive navigation. 
+- User Authentication with login, password and registration.
+- Favorites System to save preferred movies. 
+- Movie Search by title or category.
+- Administrator Dashboard with **CRUD** functionalities (Create, Read, Update and Delete).
+- View by **Genres and Categories** with specific pages.
+- Genre Chart with visual data about movie distribution.
+- User Profile with editable image and data.
 
-## 🚀 How to Use
-
-### Prerequisites
-- C++ compiler with C++17 support or higher
-- Operating system: Windows, Linux, or macOS
-
-### Compilation
-```bash
-g++ -std=c++17 -o sistema-gerenciamento-pessoas-cpp main.cpp
-```
-
-### Execution
-```bash
-./sistema-gerenciamento-pessoas-cpp
-```
-
-## 📖 Main Menu
+## 📁 Folder Structure
 
 ```
-MENU PRINCIPAL
-0 - Salvar Dados
-1 - Cadastrar uma Pessoa
-2 - Listar Todas as Pessoas
-3 - Pesquisar por Nome
-4 - Pesquisar por CPF
-5 - Excluir Pessoa
-6 - Apagar Todas as Pessoas Cadastradas
-7 - Aniversariantes do Mês
-8 - Mostrar Status do Programa
-9 - Sair do Programa
+catalogo_de_filmes/
+│
+├── .git/
+├── db/
+│   └── db.json
+│
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── scripts/
+│   │       ├── app.js
+│   │       ├── auth.js
+│   │       ├── dashboard.js
+│   │       ├── favoritos.js
+│   │       ├── generos.js
+│   │       ├── graf.js
+│   │       ├── login.js
+│   │       ├── perfil.js
+│   │       └── resultados.js
+│   │
+│   ├── categoria.html
+│   ├── dashboard.html
+│   ├── detalhes.html
+│   ├── favoritos.html
+│   ├── generos.html
+│   ├── index.html
+│   ├── login.html
+│   ├── perfil.html
+│   └── resultados.html
+│
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-## 🏗️ System Architecture
+## 🔑 Site Access
 
-### Main Classes
+Users can only interact with the site if they are logged in. You can use one of the available accounts below or create a new one:
 
-#### `Utils`
-Utility class with helper functions:
-- CPF formatting and cleaning
-- Safe data reading
-- User interface (screen clearing, pauses, etc.)
+### 👤 Access Accounts
 
-#### `Data`
-Complete date management:
-- Date validation
-- Leap year calculation
-- Date formatting
-- Specific month verification
+- **Administrator:**  
+  Email: `admin@abc.com`  
+  Password: `123`  
+  **Access Dashboard:** The dashboard only becomes available for the administrator account, even if accessed directly through the URL:  
+  `http://localhost:3000/dashboard.html`.
 
-#### `Pessoa` (Abstract Base Class)
-- Basic attributes: name, CPF, date of birth
-- Virtual methods for data reading and writing
-- Base for Student and Teacher inheritance
+- **Regular User:**  
+  Email: `user@abc.com`  
+  Password: `123`
 
-#### `Aluno` (Inherits from Pessoa)
-- Specific attribute: matrícula
-- Static quantity counter
-- Specific input/output implementation
+### 🚪 Logout from Current Account
 
-#### `Professor` (Inherits from Pessoa)
-- Specific attribute: titulação
-- Academic title validation
-- Static quantity counter
-
-#### `Sistema`
-Main system operations:
-- Registration, search, listing
-- Individual and mass deletion
-- Birthday search
-
-#### `GerenciamentoDados`
-Data persistence:
-- Saving to text files
-- Loading on initialization
-- File error handling
-
-#### `Menus`
-User interface:
-- Main menu and submenus
-- Intuitive navigation
-- Input validation
-
-## 💾 Data Storage
-
-### Generated Files
-- `alunos.txt`: Student data
-- `professores.txt`: Teacher data
-
-### File Format
-```
-[quantidade_de_registros]
-[nome]
-[cpf]
-[dia] [mes] [ano]
-[campo_especifico] // matrícula for students, titulação for teachers
-```
-
-## 🔍 Detailed Features
-
-### Search
-- **By Name**: Partial search (substring)
-- **By CPF**: Exact search with automatic formatting
-
-### Validations
-- **CPF**: Accepts formats with or without mask
-- **Dates**: Complete validation including leap years
-- **Limits**: Maximum of 100 people per category
-
-### Birthday Tracking
-- Search by specific month (1-12)
-- Separate listing: students, teachers, or all
-- Organized display with person type
-
-## ⚠️ Important Notes
-
-### Limitations
-- Maximum of 100 students and 100 teachers
-- Year validation between 1900 and 2100
-- Portuguese-only interface
-
-### Recommendations
-- Always save data after registration/deletion operations
-- Keep backups of data files
-- Use correct format for CPF and dates
-
-## 🛠️ Technical Features
-
-### Applied Concepts
-- **Object-Oriented Programming**: Inheritance, polymorphism, encapsulation
-- **Memory Management**: Dynamic allocation with `new`/`delete`
-- **Exception Handling**: `try`/`catch` for critical operations
-- **Files**: Reading and writing text files
-- **STL**: Use of `vector`, `string`, and algorithms
-
-### Design Patterns
-- **Template Method**: Virtual methods in `Pessoa`
-- **Singleton-like**: Static utility classes
-- **Strategy**: Different implementations for Aluno/Professor
-
-## 📝 Usage Example
-
-```cpp
-// Register a new student
-Aluno* novoAluno = new Aluno("João Silva", "123.456.789-00", 15, 3, 2000, "2024001");
-
-// Search by name
-sistema.pesquisarPorNomeAluno(); // Type: "João"
-
-// List birthday people
-sistema.listarTodosAniversariantes(3); // March
-```
-
-## 🤝 Contributions
-
-This project was developed as an educational system demonstrating fundamental concepts of C++ and object-oriented programming. Suggestions and improvements are welcome!
+To log out from the account used in the current session, the user must go to the **profile** section and click the red **"Logout"** button.
 
 ---
 
-**Developed in C++** | **CLI Interface** | **File Persistence**
+## ⚙️ Requirements to Run the Project Locally
+
+For the site to work correctly in a local development environment, some conditions must be met.
+
+### ✅ 1. Have Node.js Installed
+
+Node.js is a platform that allows running JavaScript outside the browser. It is essential to run the development server and install project dependencies.
+
+- Download the LTS version at:  
+  [https://nodejs.org/](https://nodejs.org/)
+
+- After installing, verify everything is working with the following commands in the terminal:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+### ✅ 2. Have npm (Node Package Manager)
+
+`npm` is usually installed along with Node.js. It is responsible for installing and managing project packages (dependencies).
+
+---
+
+### ✅ 3. Install Project Dependencies
+
+After downloading or cloning the project, open the terminal in the project folder and run:
+
+```bash
+npm install
+```
+
+This command will install all necessary libraries that are listed in the `package.json` file.
+
+---
+
+### ✅ 4. Run the Project with `npm start`
+
+After installing dependencies, start the project with:
+
+```bash
+npm start
+```
+
+This command will run the local server and open the site in the browser, usually at:
+
+```
+http://localhost:3000
+```
+
+---
+
+If you need help setting up the environment or customizing access behavior based on user type, contact the development team or consult the project documentation.
+
+## 📷 Screen Prints with Implementation
+
+### Home Page - *index.html*
+
+<img src="public/assets/images/prints/inicial/entrada.png">
+
+### Search Results Page - *resultados.html*
+
+<img src="public/assets/images/prints/exemplo_pesquisa.png">
+
+### Details Page - *detalhes.html*
+
+<img src="public/assets/images/prints/detalhes.png">
+
+### Categories Page - *categoria.html*
+
+<img src="public/assets/images/prints/categorias/populares.png">
+
+### Genre Filter Page - *generos.html*
+
+<img src="public/assets/images/prints/genero_pesquisa/depois.png">
+
+### Profile Page - *perfil.html*
+
+<img src="public/assets/images/prints/perfil.png">
+
+### Favorites Page - *favoritos.html*
+
+<img src="public/assets/images/prints/favoritos.png">
+
+### Admin Dashboard Page - *dashboard.html*
+
+<img src="public/assets/images/prints/dashboard.png">
