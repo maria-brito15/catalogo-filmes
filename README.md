@@ -1,6 +1,8 @@
 # 🎬 Catálogo de Filmes - Trabalho Prático
 
-- **Autoria:** Maria Eduarda de Paula Brito  
+[English Version Here](README_en.md)
+
+- **Autoria:** Maria Eduarda de P. Brito  
 
 ## 📄 Descrição do Projeto
 
